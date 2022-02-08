@@ -1,0 +1,23 @@
+GET http://localhost:3000/tweets
+
+### Create tweet
+POST http://localhost:3000/tweets
+Content-Type: application/json
+
+{
+  "Text": "Imersão começou!!!!",
+  "User": {
+    "Name": "ImGabreuw"
+  }
+}
+
+### Find One Mail
+GET http://localhost:3000/mail-list
+
+### Create Mail
+POST http://localhost:3000/mail-list
+Content-Type: application/json
+
+{
+  "emails": ["user1@gmail.com", "user2@gmail.com", "user3@gmail.com"]
+}
