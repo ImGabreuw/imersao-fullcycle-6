@@ -82,7 +82,5 @@ services:
         /etc/confluent/docker/run &
         #
         sleep infinity
-    volumes:
-      - ./connectors/connector-secrets.properties:/opt/connector-secrets.properties
     extra_hosts:
       - "host.docker.internal:172.17.0.1"
