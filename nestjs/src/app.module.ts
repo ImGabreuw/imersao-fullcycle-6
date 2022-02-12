@@ -10,7 +10,7 @@ import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({ isGlobal: true }),
     BullModule.forRoot({
       redis: {
         host: process.env.REDIS_HOST,
