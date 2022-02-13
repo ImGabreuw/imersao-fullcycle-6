@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nextjs
+spec:
+  selector:
+    matchLabels:
+      app: nextjs
+  template:
+    metadata:
+      labels:
+        app: nextjs
+    spec:
+      containers:
+        - name: nextjs
+          image: imgabreuw/imersao-fullcycle-6-nextjs:latest
+          envFrom:
+            - secretRef:
+                name: nextjs-secret
+          ports:
+            - containerPort: 3000

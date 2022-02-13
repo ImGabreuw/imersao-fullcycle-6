@@ -14,6 +14,7 @@ import { BullModule } from '@nestjs/bull';
         store: redisStore,
         host: process.env.REDIS_HOST,
         port: parseInt(process.env.REDIS_PORT),
+        auth_pass: process.env.REDIS_AUTH_PASS
       }),
     }),
     MongooseModule.forFeature([
